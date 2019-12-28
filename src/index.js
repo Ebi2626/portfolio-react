@@ -14,6 +14,82 @@ class Portfolio extends Component {
       settings: 0,
       template: 1
     };
+    this.menuMove = this.menuMove.bind(this);
+    this.horizontalStep = this.horizontalStep.bind(this);
+    this.verticalStep = this.verticalStep.bind(this);
+  }
+  horizontalStep(a) {
+    if (a === "ArrowUp") {
+      this.setState(prevState => {
+        let newValue = prevState.vertical + 1;
+        if (newValue > 3) {
+          newValue = 4;
+        }
+        return {
+          vertical: newValue
+        };
+      });
+    } else if (a === "ArrowDown") {
+      this.setState(prevState => {
+        let newValue = prevState.vertical - 1;
+        if (newValue < 2) {
+          newValue = 1;
+        }
+        return {
+          vertical: newValue
+        };
+      });
+    } else {
+      console.log("Error, pressed unexpected key:" + a);
+    }
+  }
+  verticalStep(a) {
+    if (a === "ArrowRight") {
+      this.setState(prevState => {
+        let newValue = prevState.horizontal + 1;
+        if (newValue > 3) {
+          newValue = 4;
+        }
+        return {
+          horizontal: newValue
+        };
+      });
+    } else if (a === "ArrowLeft") {
+      this.setState(prevState => {
+        let newValue = prevState.horizontal - 1;
+        if (newValue < 2) {
+          newValue = 1;
+        }
+        return {
+          horizontal: newValue
+        };
+      });
+    } else {
+      console.log("Error, pressed unexpected key:" + a);
+    }
+  }
+  menuMove() {
+    window.addEventListener("keydown", e => {
+      switch (e.key) {
+        case "ArrowUp":
+          this.horizontalStep(e.key);
+          break;
+        case "ArrowDown":
+          this.horizontalStep(e.key);
+          break;
+        case "ArrowLeft":
+          this.verticalStep(e.key);
+          break;
+        case "ArrowRight":
+          this.verticalStep(e.key);
+          break;
+        default:
+          break;
+      }
+    });
+  }
+  componentDidMount() {
+    this.menuMove();
   }
   render() {
     return (

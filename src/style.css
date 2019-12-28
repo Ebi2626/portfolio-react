@@ -8,6 +8,7 @@ body {
   height: 100vh;
   overflow-x: hidden;
   cursor: none;
+  user-select: none;
 }
 @media all and (min-width: 768) {
   body {

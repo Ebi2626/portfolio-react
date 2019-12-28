@@ -63,10 +63,30 @@ class Nav extends Component {
     }
     return (
       <NavBox>
-        <NavItem id={1} style={style1} element="About me" />
-        <NavItem id={2} style={style2} element="My projects" />
-        <NavItem id={3} style={style3} element="My skills" />
-        <NavItem id={4} style={style4} element="Contact" />
+        <NavItem
+          id={1}
+          style={style1}
+          current={currentOption === 1 ? true : false}
+          element="About me"
+        />
+        <NavItem
+          id={2}
+          style={style2}
+          current={currentOption === 2 ? true : false}
+          element="My projects"
+        />
+        <NavItem
+          id={3}
+          style={style3}
+          current={currentOption === 3 ? true : false}
+          element="My skills"
+        />
+        <NavItem
+          id={4}
+          style={style4}
+          current={currentOption === 4 ? true : false}
+          element="Contact"
+        />
       </NavBox>
     );
   }
