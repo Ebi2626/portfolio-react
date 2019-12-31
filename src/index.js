@@ -19,17 +19,17 @@ class Portfolio extends Component {
     this.verticalStep = this.verticalStep.bind(this);
   }
   horizontalStep(a) {
-    if (a === "ArrowUp") {
+    if (a === "ArrowDown") {
       this.setState(prevState => {
         let newValue = prevState.vertical + 1;
-        if (newValue > 3) {
-          newValue = 4;
+        if (newValue > 4) {
+          newValue = 5;
         }
         return {
           vertical: newValue
         };
       });
-    } else if (a === "ArrowDown") {
+    } else if (a === "ArrowUp") {
       this.setState(prevState => {
         let newValue = prevState.vertical - 1;
         if (newValue < 2) {
@@ -51,7 +51,8 @@ class Portfolio extends Component {
           newValue = 4;
         }
         return {
-          horizontal: newValue
+          horizontal: newValue,
+          vertical: 1
         };
       });
     } else if (a === "ArrowLeft") {
@@ -61,7 +62,8 @@ class Portfolio extends Component {
           newValue = 1;
         }
         return {
-          horizontal: newValue
+          horizontal: newValue,
+          vertical: 1
         };
       });
     } else {

@@ -15,7 +15,7 @@ class NavItem extends Component {
           Content = <AboutMe />;
           break;
         case 2:
-          Content = <MyProjects />;
+          Content = <MyProjects vertical={this.props.vertical} />;
           break;
         case 3:
           Content = <MySkills />;
