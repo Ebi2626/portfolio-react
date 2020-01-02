@@ -1,12 +1,24 @@
 import React, { Component } from "react";
-import MySkillsBox from "./style/mySkils";
+import MySkillsWrapper from "./style/mySkills";
+import SkillsList from "./skillsList";
+import Skill from "./skill";
 
 class MySkills extends Component {
   render() {
+    let Content = SkillsList.map(element => {
+      return (
+        <Skill
+          name={element.name}
+          img={element.img}
+          level={element.level}
+          description={element.description}
+          id={"skill-" + element.id}
+        />
+      );
+    });
+
     return (
-      <MySkillsBox>
-        <p>Test</p>
-      </MySkillsBox>
+      <MySkillsWrapper>{Content[this.props.vertical - 1]}</MySkillsWrapper>
     );
   }
 }

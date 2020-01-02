@@ -9,6 +9,9 @@ const HomeBox = styled.div`
   flex-direction: row;
   border: solid 15px blue;
   box-shadow: 0px 0px 15px 4px blue;
+  justify-content: center;
+  top: 0;
+  left: 0;
 `;
 
 export default HomeBox;

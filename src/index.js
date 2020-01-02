@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import PortfolioBox from "./style/portfolio.js";
 import Home from "./home";
 
+
 import "./style.css";
 
 class Portfolio extends Component {
@@ -17,13 +18,43 @@ class Portfolio extends Component {
     this.menuMove = this.menuMove.bind(this);
     this.horizontalStep = this.horizontalStep.bind(this);
     this.verticalStep = this.verticalStep.bind(this);
+    this.openLink = this.openLink.bind(this);
+  }
+
+  openLink() {
+    let link = document.querySelector("a");
+    window.open(link.href, "_blank");
   }
   horizontalStep(a) {
     if (a === "ArrowDown") {
       this.setState(prevState => {
         let newValue = prevState.vertical + 1;
-        if (newValue > 4) {
-          newValue = 5;
+        switch (this.state.horizontal) {
+          case 1:
+            if (newValue > 2) {
+              newValue = 2;
+            }
+            break;
+          case 2:
+            if (newValue > 5) {
+              newValue = 5;
+            }
+            break;
+          case 3:
+            if (newValue > 14) {
+              newValue = 14;
+            }
+            break;
+          case 4:
+            if (newValue > 3) {
+              newValue = 3;
+            }
+            break;
+          default:
+            console.lgo(
+              "There is some error in vertical movement f. vertiaclStep"
+            );
+            break;
         }
         return {
           vertical: newValue
@@ -84,6 +115,9 @@ class Portfolio extends Component {
           break;
         case "ArrowRight":
           this.verticalStep(e.key);
+          break;
+        case "Enter":
+          this.openLink();
           break;
         default:
           break;

@@ -12,16 +12,16 @@ class NavItem extends Component {
     if (this.props.current) {
       switch (this.props.id) {
         case 1:
-          Content = <AboutMe />;
+          Content = <AboutMe vertical={this.props.vertical} />;
           break;
         case 2:
           Content = <MyProjects vertical={this.props.vertical} />;
           break;
         case 3:
-          Content = <MySkills />;
+          Content = <MySkills vertical={this.props.vertical} />;
           break;
         case 4:
-          Content = <Contact />;
+          Content = <Contact vertical={this.props.vertical} />;
           break;
         default:
           break;

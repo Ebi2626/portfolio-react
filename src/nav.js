@@ -19,7 +19,7 @@ class Nav extends Component {
       right: "-110px"
     };
     let styleBottom = {
-      bottom: "10px",
+      bottom: "-20px",
       left: "50%",
       transform: "translateX(-50%)",
       textAlign: "center"
@@ -81,12 +81,14 @@ class Nav extends Component {
           style={style3}
           current={currentOption === 3 ? true : false}
           element="My skills"
+          vertical={this.props.vertical}
         />
         <NavItem
           id={4}
           style={style4}
           current={currentOption === 4 ? true : false}
           element="Contact"
+          vertical={this.props.vertical}
         />
       </NavBox>
     );

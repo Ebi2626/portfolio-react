@@ -5,7 +5,7 @@ const projectsList = [
     description:
       "Simple application prepared in order to get to know what actually is React. It let us making simple counting on complex numbers.",
     img: "./complex.png",
-    demo: "",
+    demo: "https://codesandbox.io/s/github/Ebi2626/CalculatorComplex",
     id: 1
   },
   {
