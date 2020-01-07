@@ -1,0 +1,92 @@
+.fade-appear {
+  opacity: 0;
+}
+.fade-appear-active {
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+.fade-appear-done {
+  opacity: 1;
+}
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+.fade-enter-done {
+  opacity: 1;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+.fade-exit-done {
+  opacity: 0;
+}
+
+.slideUp-appear {
+  top: 100vh;
+}
+.slideUp-appear-active {
+  top: 0vh;
+  transition: top 0.5s linear;
+}
+.slideUp-appear-done {
+  top: 0vh;
+}
+.slideUp-enter {
+  top: 100vh;
+}
+.slideUp-enter-active {
+  top: 0vh;
+  transition: top 0.5s linear;
+}
+.slideUp-enter-done {
+  top: 0vh;
+}
+.slideUp-exit {
+  top: 0vh;
+}
+.slideUp-exit-active {
+  top: -100vh;
+  transition: top 0.5s linear;
+}
+.slideUp-exit-done {
+  top: -100;
+}
+
+.slideDown-appear {
+  top: -100vh;
+}
+.slideDown-appear-active {
+  top: 0vh;
+  transition: top 0.5s linear;
+}
+.slideDown-appear-done {
+  top: 0vh;
+}
+.slideDown-enter {
+  top: -100vh;
+}
+.slideDown-enter-active {
+  top: 0vh;
+  transition: top 0.5s linear;
+}
+.slideDown-enter-done {
+  top: 0vh;
+}
+.slideDown-exit {
+  top: 0vh;
+}
+.slideDown-exit-active {
+  top: 100vh;
+  transition: top 0.5s linear;
+}
+.slideDown-exit-done {
+  top: 100vh;
+}

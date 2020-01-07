@@ -9,6 +9,7 @@ class Home extends Component {
         <Nav
           horizontal={this.props.horizontal}
           vertical={this.props.vertical}
+          prevVertical={this.props.prevVertical}
         />
       </HomeBox>
     );

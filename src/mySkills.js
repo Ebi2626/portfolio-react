@@ -5,6 +5,13 @@ import Skill from "./skill";
 
 class MySkills extends Component {
   render() {
+    let slide;
+    let projectNumber = this.props.vertical - 1;
+    if (this.props.prevVertical < this.props.vertical) {
+      slide = "slideDown";
+    } else {
+      slide = "slideUp";
+    }
     let Content = SkillsList.map(element => {
       return (
         <Skill
@@ -13,13 +20,12 @@ class MySkills extends Component {
           level={element.level}
           description={element.description}
           id={"skill-" + element.id}
+          slide={slide}
         />
       );
     });
 
-    return (
-      <MySkillsWrapper>{Content[this.props.vertical - 1]}</MySkillsWrapper>
-    );
+    return <MySkillsWrapper>{Content[projectNumber]}</MySkillsWrapper>;
   }
 }
 

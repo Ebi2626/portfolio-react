@@ -2,18 +2,20 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import PortfolioBox from "./style/portfolio.js";
 import Home from "./home";
-
+import "./transition.css";
+import { CSSTransition } from "react-transition-group";
 
 import "./style.css";
 
 class Portfolio extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       horizontal: 1,
       vertical: 1,
       settings: 0,
-      template: 1
+      template: 1,
+      prevVertical: 1
     };
     this.menuMove = this.menuMove.bind(this);
     this.horizontalStep = this.horizontalStep.bind(this);
@@ -29,6 +31,7 @@ class Portfolio extends Component {
     if (a === "ArrowDown") {
       this.setState(prevState => {
         let newValue = prevState.vertical + 1;
+        let currentValue = prevState.vertical;
         switch (this.state.horizontal) {
           case 1:
             if (newValue > 2) {
@@ -57,16 +60,19 @@ class Portfolio extends Component {
             break;
         }
         return {
+          prevVertical: currentValue,
           vertical: newValue
         };
       });
     } else if (a === "ArrowUp") {
       this.setState(prevState => {
         let newValue = prevState.vertical - 1;
+        let currentValue = prevState.vertical;
         if (newValue < 2) {
           newValue = 1;
         }
         return {
+          prevVertical: currentValue,
           vertical: newValue
         };
       });
@@ -78,8 +84,8 @@ class Portfolio extends Component {
     if (a === "ArrowRight") {
       this.setState(prevState => {
         let newValue = prevState.horizontal + 1;
-        if (newValue > 3) {
-          newValue = 4;
+        if (newValue > 4) {
+          newValue = 1;
         }
         return {
           horizontal: newValue,
@@ -89,8 +95,8 @@ class Portfolio extends Component {
     } else if (a === "ArrowLeft") {
       this.setState(prevState => {
         let newValue = prevState.horizontal - 1;
-        if (newValue < 2) {
-          newValue = 1;
+        if (newValue < 1) {
+          newValue = 4;
         }
         return {
           horizontal: newValue,
@@ -130,10 +136,13 @@ class Portfolio extends Component {
   render() {
     return (
       <PortfolioBox>
-        <Home
-          horizontal={this.state.horizontal}
-          vertical={this.state.vertical}
-        />
+        <CSSTransition appear={true} in={true} classNames="fade" timeout={3000}>
+          <Home
+            horizontal={this.state.horizontal}
+            vertical={this.state.vertical}
+            prevVertical={this.state.prevVertical}
+          />
+        </CSSTransition>
       </PortfolioBox>
     );
   }

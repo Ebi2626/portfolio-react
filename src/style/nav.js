@@ -7,6 +7,7 @@ const NavBox = styled.ul`
   height: calc(100vmin - 150px);
   margin: 0 auto;
   color: black;
+  z-index: 1;
 `;
 
 export default NavBox;

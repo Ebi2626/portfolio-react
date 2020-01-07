@@ -4,18 +4,12 @@ const AboutMeBox = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
+  max-height: 768px;
+  overflow-y: hidden;
   float: left;
   text-align: justify;
   font-size: 1.2rem;
-  &::before {
-    position: absolute;
-    content: "Edwin Harmata";
-    font-size: 1.4rem;
-    left: 0px;
-    top: -60px;
-    width: 100%;
-    text-align: center;
-  }
+  overflow-y: hidden;
 `;
 
 export default AboutMeBox;

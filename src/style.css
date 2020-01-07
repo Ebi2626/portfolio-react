@@ -10,6 +10,10 @@ body {
   cursor: none;
   user-select: none;
 }
+.nav__item {
+  transition: all 0.3s linear;
+  font-size: 48px;
+}
 @media all and (min-width: 768) {
   body {
     overflow-y: hidden;

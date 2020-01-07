@@ -5,6 +5,8 @@ import AboutMe from "./aboutMe";
 import MyProjects from "./myProjects";
 import MySkills from "./mySkills";
 import Contact from "./contact";
+import "./transition.css";
+import { CSSTransition } from "react-transition-group";
 
 class NavItem extends Component {
   render() {
@@ -15,13 +17,28 @@ class NavItem extends Component {
           Content = <AboutMe vertical={this.props.vertical} />;
           break;
         case 2:
-          Content = <MyProjects vertical={this.props.vertical} />;
+          Content = (
+            <MyProjects
+              vertical={this.props.vertical}
+              prevVertical={this.props.prevVertical}
+            />
+          );
           break;
         case 3:
-          Content = <MySkills vertical={this.props.vertical} />;
+          Content = (
+            <MySkills
+              vertical={this.props.vertical}
+              prevVertical={this.props.prevVertical}
+            />
+          );
           break;
         case 4:
-          Content = <Contact vertical={this.props.vertical} />;
+          Content = (
+            <Contact
+              vertical={this.props.vertical}
+              prevVertical={this.props.prevVertical}
+            />
+          );
           break;
         default:
           break;
@@ -29,7 +46,16 @@ class NavItem extends Component {
       return (
         <>
           <Item style={this.props.style}>{this.props.element}</Item>
-          <Wrapper>{Content}</Wrapper>
+          <Wrapper>
+            <CSSTransition
+              appear={true}
+              in={true}
+              classNames="fade"
+              timeout={1000}
+            >
+              {Content}
+            </CSSTransition>
+          </Wrapper>
         </>
       );
     } else {

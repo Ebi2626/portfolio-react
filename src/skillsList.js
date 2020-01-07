@@ -5,7 +5,7 @@ const SkillsList = [
     level: "Medium",
     img: "./html5.png",
     description:
-      "I have quite big experience in writing code in HTML. I can build website structures without using documentation or any other source. I understand all basics tags and I know semantic tags from HTML 5. If I would have to write some code in HTML 5 I'd like to use emmet to write more code in less time."
+      "I have learnd by heart all popular HTML tags. I understand and I am able to use modern semantic tags to build accesible websites."
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const SkillsList = [
     level: "Medium",
     img: "./css3.png",
     description:
-      "In my projects I usually use BEM methodolgy to ordered my css classes. I understand idea of mobile first approach and I know problems of writing styles for responsive layout. In more advanced projects I use SASS (SCSS) with webpack to write more code in shorter time."
+      "I know CSS syntax and commands needed to style websites. I understand mobile-first approach and I can build webistes which meets the RWD requirments."
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const SkillsList = [
     level: "Medium",
     img: "./js.png",
     description:
-      "I know both ES5 and ES6 version of Ecma Script. I usually try to programming in functional paradigm and make my code cleaner through writing it in some order: event listeners at the end of the code, declaring varibles at the beginning of each function. A little comments before each function. I can use JS without docummentation in the basic task. More advenced task I usually bootstrap with Stack Overflow or programmers groups on facebook."
+      "I know both ES5 and ES6 version of Ecma Script. I understand OOP paradigm in JS and I enjoy to discovering new more optimize approach to resolve old problems."
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ const SkillsList = [
     level: "Beginner",
     img: "./react.png",
     description:
-      "I understand concept of this library. I can build functional and class components without docummentation. I also understand Redux, Styled Components, React Transition Grup and Theme Provider. That mixture of tools let me writing well looks applications."
+      "I understand main concept of this library. I can work with Redux, styled-component and react-transition-group to make my apps beautiful and animated."
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ const SkillsList = [
     level: "Beginner",
     img: "./php.png",
     description:
-      "I understand syntax and grammar of that language. I know the most popular way to manage common backend problems. I can make connections to MySql database, adding and removing records. I can also use RegEx to connect function behaviour with the URI content which is helpfull to work with WordPress. I like combining PHP functions with JS code, which let me for much more than same JS."
+      "I understand syntax and grammar of that language. I can make connections with DB, write registration or login logic and combine it with JS."
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ const SkillsList = [
     level: "Enrty",
     img: "./webpack.png",
     description:
-      "With docummentation I can configure this tool to automatize basics actions necessary to set up more complicated project."
+      "With docummentation I can configure this tool to automatize basic actions necessary to set up more complicated project."
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ const SkillsList = [
     level: "Enrty",
     img: "./git.png",
     description:
-      "I understand concept of Git and the way to manage project which its authors propose. I can making commits with Git bash and copiyng remote repository to my hard drive from Github. I know terminology connected with git such as 'brunch', 'merge', 'pull', 'push'."
+      "I understand concept of Git and the way to manage project which its authors propose. I can make commits with Git bash and clone remote repository to my HDD."
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ const SkillsList = [
     level: "Medium",
     img: "./github.png",
     description:
-      "From almost beginning of my programming path I use Github as my own cloud to store my code for free. For some time I also use gihub pages to chcecking my projects in real life and sharing my code with friends."
+      "From almost beginning of my programming path I use Github as my own cloud to store my code. For some time I am using gihub pages."
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ const SkillsList = [
     level: "Beginner",
     img: "./mysql.png",
     description:
-      "I understand concept of relational databases. I can build simple queries without documentation and make complex queries with documentation. I know basic terminology connected with databases. I have some experience in work with MySql and PHPmyAdmin."
+      "I understand concept of relational DB. I can build simple queries. I know basic DB terminology and I have some experience in work with MySql and PHPmyAdmin."
   },
   {
     id: 10,
@@ -93,7 +93,7 @@ const SkillsList = [
     level: "Medium",
     img: "./bootstrap.png",
     description:
-      "This CSS framework has as much advantage as disadvantage. On the one hand it can make much more faster to write responsive layout for our website, on the other hand it limits our imagine and creativity. I know basic classes helpfull to styled standard divs and text elements or divide site into parts."
+      "I know basic classes helpfull to styled standard divs and text elements or divide site into parts."
   },
   {
     id: 13,
@@ -101,7 +101,7 @@ const SkillsList = [
     level: "Beginner",
     img: "./linux.png",
     description:
-      "I know structure of linux system and know basic unix commands which could be helpfull in frontend work. Usually during setting up the project I use 'touch', 'mkdir', 'rm', 'rmdir', 'cat', 'mv', 'cp'. To make some simple corrections in my files I use VIM editor in the terminal to save time. I also understand 'chmod' and giving permissions for different action on file."
+      "I can install and use Linux. I know basic unix commands. To make simple corrections in my files I use VIM editor in the terminal."
   },
   {
     id: 14,

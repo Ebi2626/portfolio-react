@@ -2,6 +2,8 @@ import React from "react";
 import Content from "./style/contactItem/content";
 import Title from "./style/contactItem/title";
 import Wrapper from "./style/contactItem/wrapper";
+import "./transition.css";
+import { CSSTransition } from "react-transition-group";
 
 function ContactItem(props) {
   let contentValue;
@@ -16,11 +18,19 @@ function ContactItem(props) {
   }
 
   return (
-    <Wrapper>
-      <Title>{props.name}</Title>
-      {props.icon}
-      <Content>{contentValue}</Content>
-    </Wrapper>
+    <CSSTransition
+      in={true}
+      appear={true}
+      classNames={props.slide}
+      timeout={500}
+      key={props.id}
+    >
+      <Wrapper key={props.id}>
+        <Title>{props.name}</Title>
+        {props.icon}
+        <Content>{contentValue}</Content>
+      </Wrapper>
+    </CSSTransition>
   );
 }
 

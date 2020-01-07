@@ -12,6 +12,7 @@ const HomeBox = styled.div`
   justify-content: center;
   top: 0;
   left: 0;
+  z-index: 10;
 `;
 
 export default HomeBox;

@@ -6,8 +6,9 @@ const ContactWrapper = styled.div`
   align-items: center;
   position: absolute;
   width: 100%;
-  height: 80%;
-  top: 0%;
+  height: 100%;
+  margin-top: -30px;
+  top: 0;
   left: 0;
 `;
 export default ContactWrapper;

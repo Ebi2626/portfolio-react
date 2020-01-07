@@ -5,6 +5,13 @@ import ProjectItem from "./projectItem";
 
 class MyProjects extends Component {
   render() {
+    let slide;
+    let projectNumber = this.props.vertical - 1;
+    if (this.props.prevVertical < this.props.vertical) {
+      slide = "slideDown";
+    } else {
+      slide = "slideUp";
+    }
     let Content = ProjectsList.map(element => {
       return (
         <ProjectItem
@@ -13,11 +20,12 @@ class MyProjects extends Component {
           demo={element.demo}
           description={element.description}
           id={"project-" + element.id}
+          key={"project-" + element.id}
+          slide={slide}
         />
       );
     });
-
-    return <MyProjectBox>{Content[this.props.vertical - 1]}</MyProjectBox>;
+    return <MyProjectBox>{Content[projectNumber]}</MyProjectBox>;
   }
 }
 
