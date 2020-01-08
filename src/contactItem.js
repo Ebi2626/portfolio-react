@@ -4,17 +4,42 @@ import Title from "./style/contactItem/title";
 import Wrapper from "./style/contactItem/wrapper";
 import "./transition.css";
 import { CSSTransition } from "react-transition-group";
+import "./style.css";
 
 function ContactItem(props) {
   let contentValue;
   let html = new RegExp(/http/);
   let mail = new RegExp(/@/);
   if (props.content.match(html)) {
-    contentValue = <a href={props.content}>{props.content}</a>;
+    contentValue = (
+      <a
+        style={{ position: "relative" }}
+        className="tooltip"
+        href={props.content}
+      >
+        {props.content}
+      </a>
+    );
   } else if (props.content.match(mail)) {
-    contentValue = <a href={"mailto:" + props.content}>{props.content}</a>;
+    contentValue = (
+      <a
+        style={{ position: "relative" }}
+        className="tooltip"
+        href={"mailto:" + props.content}
+      >
+        {props.content}
+      </a>
+    );
   } else {
-    contentValue = <a href={"tel:+48" + props.content}>{props.content}</a>;
+    contentValue = (
+      <a
+        style={{ position: "relative" }}
+        className="tooltip"
+        href={"tel:+48" + props.content}
+      >
+        {props.content}
+      </a>
+    );
   }
 
   return (

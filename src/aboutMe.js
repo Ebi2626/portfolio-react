@@ -7,7 +7,7 @@ class AboutMe extends Component {
   render() {
     let Content = {
       name: "Edwin",
-      surName: "Harmata",
+      surname: "Harmata",
       age: 24,
       passion: ["Programming", "Psychology", "Physic", "MMA", "Fantasy"]
     };
@@ -16,9 +16,9 @@ class AboutMe extends Component {
       <AboutMeBox>
         <AboutMeItem
           name={Content.name}
-          surName={Content.surName}
+          surname={Content.surname}
           age={Content.age}
-          passion={[...Content.passion]}
+          passion={Content.passion}
         />
       </AboutMeBox>
     );

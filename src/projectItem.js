@@ -10,14 +10,19 @@ import ProjectWrapper from "./style/projectItem/projectWrapper";
 
 function ProjectItem(props) {
   return (
-    <CSSTransition in={true} appear={true} classNames={props.slide} timeout={500}>
+    <CSSTransition
+      in={true}
+      appear={true}
+      classNames={props.slide}
+      timeout={500}
+    >
       <ProjectWrapper>
         <Title>{props.name}</Title>
         <Img src={props.img} alt={props.name} />
         <Description>{props.description}</Description>
-        <p>
-          <Demo href={props.demo}>Demo</Demo>
-        </p>
+        <Demo className="tooltip" href={props.demo}>
+          Demo
+        </Demo>
       </ProjectWrapper>
     </CSSTransition>
   );

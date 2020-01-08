@@ -19,13 +19,44 @@
   opacity: 1;
 }
 .fade-exit {
-  opacity: 1;
+  opacity: 0;
 }
 .fade-exit-active {
   opacity: 1;
   transition: opacity 0.5s linear;
 }
 .fade-exit-done {
+  opacity: 0;
+}
+
+.fade-btn-appear {
+  opacity: 0;
+}
+.fade-btn-appear-active {
+  opacity: 0.3;
+  transition: opacity 1s linear;
+}
+.fade-btn-appear-done {
+  opacity: 0.3;
+}
+.fade-btn-enter {
+  opacity: 0;
+}
+.fade-btn-enter-active {
+  opacity: 0.3;
+  transition: opacity 1s linear;
+}
+.fade-btn-enter-done {
+  opacity: 0.3;
+}
+.fade-btn-exit {
+  opacity: 0;
+}
+.fade-btn-exit-active {
+  opacity: 0.3;
+  transition: opacity 0.5s linear;
+}
+.fade-btn-exit-done {
   opacity: 0;
 }
 
@@ -50,10 +81,10 @@
   top: 0vh;
 }
 .slideUp-exit {
-  top: 0vh;
+  top: -100vh;
 }
 .slideUp-exit-active {
-  top: -100vh;
+  top: 0vh;
   transition: top 0.5s linear;
 }
 .slideUp-exit-done {
@@ -81,10 +112,10 @@
   top: 0vh;
 }
 .slideDown-exit {
-  top: 0vh;
+  top: 100vh;
 }
 .slideDown-exit-active {
-  top: 100vh;
+  top: 0vh;
   transition: top 0.5s linear;
 }
 .slideDown-exit-done {

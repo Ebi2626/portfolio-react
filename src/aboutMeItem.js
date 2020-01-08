@@ -2,6 +2,7 @@ import React from "react";
 import "./transition.css";
 import { CSSTransition } from "react-transition-group";
 import Line from "./style/aboutMe/line";
+import Wrapper from "./style/aboutMe/wrapper";
 
 function AboutMeItem(props) {
   return (
@@ -11,40 +12,28 @@ function AboutMeItem(props) {
       classNames={props.slide}
       timeout={500}
     >
-      <div>
+      <Wrapper>
         <Line>
-          <h1>
-            Name:
-            <span style={{ marginLeft: "auto", marginRight: 10 }}>
-              {props.name}
-            </span>
-          </h1>
+          <h1>Name:</h1>
+          <h2>{props.name}</h2>
         </Line>
         <Line>
-          <h1>
-            Surname:
-            <span style={{ marginLeft: "auto", marginRight: 10 }}>
-              {props.surName}
-            </span>
-          </h1>
+          <h1>Surname:</h1>
+          <h2>{props.surname}</h2>
         </Line>
         <Line>
-          <h1>
-            Age:
-            <span style={{ marginLeft: "auto", marginRight: 10 }}>
-              {props.age}
-            </span>
-          </h1>
+          <h1>Age:</h1>
+          <h2>{props.age}</h2>
         </Line>
         <Line>
-          <h1>
-            Passion:
-            <span style={{ marginLeft: "auto", marginRight: 10 }}>
-              {props.passion}
-            </span>
-          </h1>
+          <h1>Passion:</h1>
+          <ul>
+            {props.passion.map(element => (
+              <li>{element}</li>
+            ))}
+          </ul>
         </Line>
-      </div>
+      </Wrapper>
     </CSSTransition>
   );
 }

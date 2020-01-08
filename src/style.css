@@ -6,17 +6,27 @@
 body {
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
+}
+a {
   cursor: none;
-  user-select: none;
 }
 .nav__item {
   transition: all 0.3s linear;
   font-size: 48px;
 }
-@media all and (min-width: 768) {
-  body {
-    overflow-y: hidden;
-    overflow-x: hidden;
-  }
+.tooltip:after {
+  display: block;
+  margin: 5px auto;
+  position: absolute;
+  content: "Press enter to open";
+  font-size: 11px;
+  top: 20px;
+  width: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 15px;
+  text-align: center;
+  color: white;
+  cursor: none;
+  font-style: italic;
 }
