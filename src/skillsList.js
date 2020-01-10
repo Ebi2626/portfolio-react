@@ -110,6 +110,14 @@ const SkillsList = [
     img: "./vscode.png",
     description:
       "I usually work with this code editor. I can install all necessery extensions and plugins to work effectively. Prettier, eslint or simple syntax highlighting are invaluable help during programming."
+  },
+  {
+    id: 15,
+    name: "WordPress",
+    level: "Medium",
+    img: "./wp.png",
+    description:
+      "I can build and customize websites with this popular CMS. I set up few pages for my friends from scratch and creating database to deployment. I can modify themes and php functions."
   }
 ];
 export default SkillsList;

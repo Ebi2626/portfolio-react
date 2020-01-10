@@ -14,7 +14,7 @@ class NavItem extends Component {
     if (this.props.current) {
       switch (this.props.id) {
         case 1:
-          Content = <AboutMe vertical={this.props.vertical} />;
+          Content = <AboutMe vertical={this.props.vertical}  prevVertical={this.props.prevVertical}/>;
           break;
         case 2:
           Content = (

@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import PortfolioBox from "./style/portfolio";
 import Home from "./home";
 import MobilePortfolio from "./mobile/portfolio";
+import Entrance from "./style/entrance";
+import EntranceText from "./style/entranceText";
 
 import "./transition.css";
 import { CSSTransition } from "react-transition-group";
@@ -13,6 +15,7 @@ class Portfolio extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      level: 1,
       horizontal: 1,
       vertical: 1,
       settings: 0,
@@ -29,6 +32,20 @@ class Portfolio extends Component {
     this.verticalStep = this.verticalStep.bind(this);
     this.openLink = this.openLink.bind(this);
     this.resizeHandler = this.resizeHandler.bind(this);
+    this.entranceHandler = this.entranceHandler.bind(this);
+  }
+  entranceHandler(){
+    window.addEventListener('keydown', e => {
+      if((this.state.level===1) && (e.key === "F11")){
+        this.setState({
+          level: 2
+        });
+      } else if ((this.state.level===2) && (e.key === "Enter")) {
+        this.setState({
+          level: 3
+        })
+      }
+    });
   }
 
 
@@ -41,7 +58,12 @@ class Portfolio extends Component {
 
   openLink() {
     let link = document.querySelector("a");
-    window.open(link.href, "_blank");
+    if(this.state.level > 2){
+      if(link){
+        window.open(link.href, "_blank");
+      }
+    }
+    
   }
   horizontalStep(a) {
     if (a === "ArrowDown") {
@@ -54,6 +76,7 @@ class Portfolio extends Component {
             if (newValue > 2) {
               newValue = 2;
             }
+            console.log("Obecny vertical: "+newValue);
             newValue === 2 ? (down = false) : (down = true);
             break;
           case 2:
@@ -63,10 +86,10 @@ class Portfolio extends Component {
             newValue === 5 ? (down = false) : (down = true);
             break;
           case 3:
-            if (newValue > 14) {
-              newValue = 14;
+            if (newValue > 15) {
+              newValue = 15;
             }
-            newValue === 14 ? (down = false) : (down = true);
+            newValue === 15 ? (down = false) : (down = true);
             break;
           case 4:
             if (newValue > 3) {
@@ -80,8 +103,6 @@ class Portfolio extends Component {
             );
             break;
         }
-        console.log("Up = true");
-        console.log("Down = " + down);
         return {
           prevVertical: currentValue,
           vertical: newValue,
@@ -98,8 +119,6 @@ class Portfolio extends Component {
           newValue = 1;
         }
         newValue !== 1 ? (up = true) : (up = false);
-        console.log("Up = " + up);
-        console.log("Down = true");
         return {
           prevVertical: currentValue,
           vertical: newValue,
@@ -196,6 +215,9 @@ class Portfolio extends Component {
   componentDidMount() {
     this.menuMove();
     window.addEventListener("resize", this.resizeHandler);
+    if (this.state.level !== 3){
+      this.entranceHandler();
+    }
   }
   componentWillUnmount() {
     window.removeEventListener("resize", this.resizeHandler);
@@ -206,8 +228,21 @@ class Portfolio extends Component {
       body.style.overflow = "hidden";
       body.style.cursor = "none";
       body.style.userSelect = "none";
-      return (
-        <PortfolioBox width={this.state.window} height={this.state.height}>
+      if(this.state.level !== 3){
+        const entranceText1 = 'Welcome in my personal programming portfolio. Press "F11" to continue';
+        const entranceText2 = "Use arrows to move through my portfolio. Use \"enter\" to open link. Press \"enter\" to enter into portfolio. Enjoy!";
+        return (<Entrance>
+                  <CSSTransition
+                    in={true}
+                    appear={true}
+                    classNames="fade"
+                    timeout={1000}
+                    >
+                      <EntranceText level={this.state.level}>{this.state.level === 1? entranceText1 : entranceText2}</EntranceText>
+                    </CSSTransition>
+                  </Entrance>);
+      } else {
+        return (<PortfolioBox width={this.state.window} height={this.state.height}>
           <CSSTransition
             appear={true}
             in={true}
@@ -222,9 +257,9 @@ class Portfolio extends Component {
               up={this.state.up}
               down={this.state.down}
             />
-          </CSSTransition>
-        </PortfolioBox>
-      );
+            </CSSTransition>
+    </PortfolioBox>);
+      }
     } else {
       return (
         <MobilePortfolio width={this.state.window} height={this.state.height} />

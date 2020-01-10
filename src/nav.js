@@ -88,6 +88,8 @@ class Nav extends Component {
             style={style1}
             current={currentOption === 1 ? true : false}
             element="About me"
+            vertical={this.props.vertical}
+            prevVertical={this.props.prevVertical}
           />
         </CSSTransition>
         <CSSTransition appear={true} in={true} classNames="fade" timeout={3000}>

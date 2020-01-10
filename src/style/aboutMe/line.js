@@ -12,8 +12,9 @@ const Line = styled.div`
   border-bottom: solid 1px blue;
   width: 100%;
   margin: 5px;
+  font-family: Roboto;
   &:last-child {
-    height: 35%;
+    height: 40%;
   }
   > h2 {
     color: whitesmoke;
