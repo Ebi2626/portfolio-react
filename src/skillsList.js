@@ -5,7 +5,7 @@ const SkillsList = [
     level: "Medium",
     img: "./html5.png",
     description:
-      "I have learnd by heart all popular HTML tags. I understand and I am able to use modern semantic tags to build accesible websites."
+      "I know all basic tags needed to write whole website structure. I understand and I am able to use modern semantic tags to build accesible websites."
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const SkillsList = [
     level: "Medium",
     img: "./css3.png",
     description:
-      "I know CSS syntax and commands needed to style websites. I understand mobile-first approach and I can build webistes which meets the RWD requirments."
+      "I know CSS and SCSS syntax and commands needed to style websites. I understand mobile-first approach and I can build webistes which meets the RWD requirments."
   },
   {
     id: 3,
@@ -93,7 +93,7 @@ const SkillsList = [
     level: "Medium",
     img: "./bootstrap.png",
     description:
-      "I know basic classes helpfull to styled standard divs and text elements or divide site into parts."
+      "I know basic classes helpfull to styled standard divs and text elements or divide site into parts. I like bootstrap grid-model."
   },
   {
     id: 13,
@@ -118,6 +118,14 @@ const SkillsList = [
     img: "./wp.png",
     description:
       "I can build and customize websites with this popular CMS. I set up few pages for my friends from scratch and creating database to deployment. I can modify themes and php functions."
+  },
+  {
+    id: 16,
+    name: "C",
+    level: "Beginner",
+    img: "./c.png",
+    description:
+      "I understand syntax of that language. I can also use such libraries as: stdlib, stdio, string, math to build simple console apps."
   }
 ];
 export default SkillsList;

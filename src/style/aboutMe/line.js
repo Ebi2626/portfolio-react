@@ -12,7 +12,17 @@ const Line = styled.div`
   border-bottom: solid 1px blue;
   width: 100%;
   margin: 5px;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
+  @media all and (max-width: 800px) {
+    & {
+      font-size: 14px;
+    }
+  }
+  @media all and (max-height: 700px) {
+    & {
+      font-size: 12px;
+    }
+  }
   &:last-child {
     height: 40%;
   }

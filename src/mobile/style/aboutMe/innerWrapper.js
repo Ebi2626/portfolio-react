@@ -1,13 +1,11 @@
 import styled from "styled-components";
-const ContactWrapper = styled.div`
+
+const InnerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  max-height: 800px;
 `;
-export default ContactWrapper;
+
+export default InnerWrapper;

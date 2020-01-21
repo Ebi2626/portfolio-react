@@ -10,8 +10,8 @@ class AboutMe extends Component {
     const Content = {
       name: "Edwin",
       surname: "Harmata",
-      age: 24,
-      passion: ["Programming", "Psychology", "Physic", "MMA", "Fantasy"]
+      specialization: "Front-end",
+      passion: ["Programming", "Psychology", "Fantasy"]
     };
     if (this.props.prevVertical < this.props.vertical) {
       slide = "slideDown";
@@ -19,39 +19,41 @@ class AboutMe extends Component {
       slide = "slideUp";
     }
     const Text =
-      "Hi, my name is Edwin and I am passion-driven front-end developer. I am discovering misterious of front-end since begin of 2019. Till now I have gained knowledge and experience enough to try myself in proffesional programming at position front-end developer. I really like React, JS and fantasy literature. I am also keen on technology in IT and I find core of IT really exciting in general.";
+      "Hi, my name is Edwin and I create this page for you. I want to show you two facts: I can use React.js to build apps and I have some experience in programming. I have been learning front-end programming since 2019 and since October I am studying IT. Currently I am looking for another challenge at job market in position of junior front-end developer.";
     if (this.props.vertical === 1) {
       return (
-        <CSSTransition
-          in={true}
-          appear={true}
-          classNames={slide}
-          timeout={500}
-          >
+        <CSSTransition in={true} appear={true} classNames={slide} timeout={500}>
           <AboutMeBox>
-              <AboutMeItem
-                name={Content.name}
-                surname={Content.surname}
-                age={Content.age}
-                passion={Content.passion}
-                lvl={this.props.vertical}
-                slide={slide}
-              />
+            <AboutMeItem
+              name={Content.name}
+              surname={Content.surname}
+              specialization={Content.specialization}
+              passion={Content.passion}
+              lvl={this.props.vertical}
+              slide={slide}
+            />
           </AboutMeBox>
         </CSSTransition>
       );
     } else {
       return (
         <CSSTransition
-            in={true}
-            appear={true}
-            classNames="slide"
-            timeout={500}
-            slide={slide}
-            >
-            <AboutMeBox>
-                  <AboutMeItem lvl={this.props.vertical} text={Text} />
-            </AboutMeBox>
+          in={true}
+          appear={true}
+          classNames="slide"
+          timeout={500}
+          slide={slide}
+        >
+          <AboutMeBox
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: " center"
+            }}
+          >
+            <AboutMeItem lvl={this.props.vertical} text={Text} />
+          </AboutMeBox>
         </CSSTransition>
       );
     }

@@ -121,3 +121,34 @@
 .slideDown-exit-done {
   top: 100vh;
 }
+
+.slideLeft-appear {
+  left: -100vw;
+}
+.slideLeft-appear-active {
+  left: 0vw;
+  transition: left 0.5s linear;
+}
+.slideLeft-appear-done {
+  left: 0vw;
+}
+.slideLeft-enter {
+  left: -100vw;
+}
+.slideLeft-enter-active {
+  left: 0vw;
+  transition: left 0.5s linear;
+}
+.slideLeft-enter-done {
+  left: 0vw;
+}
+.slideLeft-exit {
+  left: -100vw;
+}
+.slideLeft-exit-active {
+  left: 0vw;
+  transition: left 0.5s linear;
+}
+.slideLeft-exit-done {
+  left: -100vw;
+}

@@ -1,10 +1,10 @@
 import styled from "styled-components";
+
 const Img = styled.img`
-  width: 20vmin;
-  height: auto;
   background-color: black;
-  min-height: 50px;
-  margin: 5px auto;
-  display: block;
+  min-height: 80px;
+  width: 100px;
+  height: auto;
 `;
+
 export default Img;

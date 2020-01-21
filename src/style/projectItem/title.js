@@ -5,6 +5,7 @@ const Title = styled.h1`
   font-size: 1.4rem;
   color: white;
   text-align: center;
+  width: 200px;
 `;
 
 export default Title;

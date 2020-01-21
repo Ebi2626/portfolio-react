@@ -3,7 +3,7 @@ const projectsList = [
     name: "Calulator for complex numbers",
     technologyStack: "HTML, CSS, JavaScript, React, Git, Visual Studio Code",
     description:
-      "Simple application prepared in order to get to know what actually is React. It let us making simple counting on complex numbers.",
+      "Simple application prepared written in purpose to learn React. It makes simple operations on complex numbers.",
     img: "./complex.png",
     demo: "https://codesandbox.io/s/github/Ebi2626/CalculatorComplex",
     id: 1
@@ -13,7 +13,7 @@ const projectsList = [
     technologyStack:
       "HTML, CSS, PHP, JavScript, Webpack, SCSS, MySql, JSON, Xampp, Git, Visual Stiudio Code",
     description:
-      "My first fullstack project from databse through backend to frontend. I create whole design, scripts, connections with DB and logic of registration.",
+      "My first fullstack project from databse through backend to frontend. I create all backend logic, connections with DB and I customized webpack to combine my SCSS with php files.",
     img: "./stronnica.png",
     demo: "https://github.com/ebi2626/stronnica/",
     id: 2
@@ -22,7 +22,7 @@ const projectsList = [
     name: "Tetris in React",
     technologyStack: "HTML, CSS, JavaScript, React, Git, Visual Studio Code",
     description:
-      "Remake of a popular game - tetris. Written whole in React with react hooks and service workers. It helps with better understanding of mapping to components.",
+      "Remake of a popular game - tetris. Written whole in React with react hooks and service workers. It helps me with better understanding of mapping to components.",
     img: "./tetris.png",
     demo: "https://ebi2626.github.io/tetris/",
     id: 3

@@ -5,6 +5,7 @@ const Description = styled.p`
   text-align: center;
   margin-bottom: 30px;
   > a:after {
+    text-align: center;
     top: 50px;
   }
 `;
