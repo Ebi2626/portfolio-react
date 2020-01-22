@@ -70,7 +70,15 @@ class Portfolio extends Component {
   // Method to force user to enable fullscreen and read instruction
   entranceHandler() {
     window.addEventListener("keydown", e => {
-      if (this.state.level === 1 && e.key === "F11") {
+      if (
+        this.state.level === 1 &&
+        navigator.userAgent.match(/Mozilla/) &&
+        e.key === "Enter"
+      ) {
+        this.setState({
+          level: 2
+        });
+      } else if (this.state.level === 1 && e.key === "F11") {
         this.setState({
           level: 2
         });
@@ -88,7 +96,7 @@ class Portfolio extends Component {
       height: window.innerHeight
     });
   }
-// Method to open link on the page in new window
+  // Method to open link on the page in new window
   openLink() {
     let link = document.querySelector("a");
     if (this.state.level > 2) {
@@ -213,9 +221,7 @@ class Portfolio extends Component {
             setTimeout(() => {
               document.querySelector(".Up") !== null
                 ? (document.querySelector(".Up").style.opacity = 0.3)
-                : console.log(
-                    "Error from too quick changing state"
-                  );
+                : console.log("Error from too quick changing state");
             }, 300);
           }
           break;
@@ -226,9 +232,7 @@ class Portfolio extends Component {
             setTimeout(() => {
               document.querySelector(".Down") !== null
                 ? (document.querySelector(".Down").style.opacity = 0.3)
-                : console.log(
-                    "Error from too quick changing state"
-                  );
+                : console.log("Error from too quick changing state");
             }, 300);
           }
           break;
@@ -239,9 +243,7 @@ class Portfolio extends Component {
             setTimeout(() => {
               document.querySelector(".Left") !== null
                 ? (document.querySelector(".Left").style.opacity = 0.3)
-                : console.log(
-                    "Error from too quick changing state"
-                  );
+                : console.log("Error from too quick changing state");
             }, 300);
           }
           break;
@@ -252,9 +254,7 @@ class Portfolio extends Component {
             setTimeout(() => {
               document.querySelector(".Right") !== null
                 ? (document.querySelector(".Right").style.opacity = 0.3)
-                : console.log(
-                    "Error from too quick changing state"
-                  );
+                : console.log("Error from too quick changing state");
             }, 300);
           }
           break;
@@ -287,10 +287,18 @@ class Portfolio extends Component {
       body.style.cursor = "none";
       body.style.userSelect = "none";
       if (this.state.level !== 3) {
-        const entranceText1 =
-          'Welcome in my personal programming portfolio. Press "F11" to continue';
-        const entranceText2 =
-          'Use arrows to move through my portfolio. Use "enter" to open link. Press "enter" to enter into portfolio. Enjoy!';
+        let entranceText1, entranceText2;
+        if (navigator.appName === "Netscape") {
+          entranceText1 =
+            'Welcome in my personal programming portfolio. Press "F11" and "enter" to continue';
+          entranceText2 =
+            'Use arrows to move through my portfolio. Use "enter" to open link. Press "enter" to enter into portfolio. Enjoy!';
+        } else {
+          entranceText1 =
+            'Welcome in my personal programming portfolio. Press "F11" to continue';
+          entranceText2 =
+            'Use arrows to move through my portfolio. Use "enter" to open link. Press "enter" to enter into portfolio. Enjoy!';
+        }
         return (
           <Entrance>
             <CSSTransition
@@ -305,7 +313,11 @@ class Portfolio extends Component {
             </CSSTransition>
           </Entrance>
         );
-      } else if (this.state.window > 600 && this.state.height > 600 && this.state.level ===3) {
+      } else if (
+        this.state.window > 600 &&
+        this.state.height > 600 &&
+        this.state.level === 3
+      ) {
         body.style.overflow = "hidden";
         body.style.cursor = "normal";
         body.style.userSelect = "none";
