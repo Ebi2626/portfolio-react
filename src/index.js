@@ -133,10 +133,10 @@ class Portfolio extends Component {
             newValue === 16 ? (down = false) : (down = true);
             break;
           case 4:
-            if (newValue > 3) {
-              newValue = 3;
+            if (newValue > 4) {
+              newValue = 4;
             }
-            newValue === 3 ? (down = false) : (down = true);
+            newValue === 4 ? (down = false) : (down = true);
             break;
           default:
             console.log(

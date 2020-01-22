@@ -13,7 +13,7 @@ import Left from "./../style/left";
 import Right from "./../style/right";
 
 // Logic of this version of app is really similar to the desktop one
-// However I wrote it a little bit later than desktop version, 
+// However I wrote it a little bit later than desktop version,
 // so the logic is a little better and the code is a little cleaner
 
 export default function Portfolio() {
@@ -21,7 +21,7 @@ export default function Portfolio() {
   const [vertical, setVertical] = useState(1);
   const [horizontal, setHorizontal] = useState(1);
   useEffect(() => {
-     // Just example of useEffect hook - here we make us
+    // Just example of useEffect hook - here we make us
     // ensure that user will see cursor on little screens
     document.querySelector("body").style.overflow = "hidden";
     document.querySelector("body").style.cursor = "auto";
@@ -44,7 +44,7 @@ export default function Portfolio() {
         maxVertical = 16;
         break;
       case 4:
-        maxVertical = 3;
+        maxVertical = 4;
         break;
       default:
         console.log(

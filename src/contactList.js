@@ -18,6 +18,12 @@ const contactList = [
     name: "Linkedin",
     icon: <i className="fa fa-linkedin" style={{ fontSize: "5rem" }} />,
     content: "https://www.linkedin.com/in/edwin-harmata"
+  },
+  {
+    id: 4,
+    name: "Github",
+    icon: <i className="fa fa-github" style={{ fontSize: "5rem" }} />,
+    content: "https://www.github.com/ebi2626"
   }
 ];
 
