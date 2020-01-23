@@ -5,7 +5,7 @@ const SkillsList = [
     level: "Medium",
     img: "./html5.png",
     description:
-      "I know all basic tags needed to write whole website structure. I understand and I am able to use modern semantic tags to build accesible websites."
+      "I know all the basic tags needed to write a whole website structure. I understand and I am able to use modern semantic tags to build accessible websites."
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const SkillsList = [
     level: "Medium",
     img: "./css3.png",
     description:
-      "I know CSS and SCSS syntax and commands needed to style websites. I understand mobile-first approach and I can build webistes which meets the RWD requirments."
+      "I know CSS and SCSS syntax and commands needed to style websites. I understand the mobile-first approach and I can build websites which meets the RWD requirements."
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const SkillsList = [
     level: "Medium",
     img: "./js.png",
     description:
-      "I know both ES5 and ES6 version of Ecma Script. I understand OOP paradigm in JS and I enjoy to discovering new more optimize approach to resolve old problems."
+      "I know both ES5 and ES6 version of Ecma Script. I understand the OOP paradigm in JS and I enjoy discovering new more optimal approaches to resolve old problems."
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ const SkillsList = [
     level: "Beginner",
     img: "./react.png",
     description:
-      "I understand main concept of this library. I can work with Redux, styled-component and react-transition-group to make my apps beautiful and animated."
+      "I understand the main concept of this library. I can work with Redux, styled-component, and react-transition-group to make my apps beautiful and animated."
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ const SkillsList = [
     level: "Beginner",
     img: "./php.png",
     description:
-      "I understand syntax and grammar of that language. I can make connections with DB, write registration or login logic and combine it with JS."
+      "I understand the syntax and grammar of that language. I can make connections with DB, write registration or login logic and combine it with JS."
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ const SkillsList = [
     level: "Enrty",
     img: "./webpack.png",
     description:
-      "With docummentation I can configure this tool to automatize basic actions necessary to set up more complicated project."
+      "With documentation, I can configure this tool to automatize the basic actions necessary to set up a more complicated project."
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ const SkillsList = [
     level: "Enrty",
     img: "./git.png",
     description:
-      "I understand concept of Git and the way to manage project which its authors propose. I can make commits with Git bash and clone remote repository to my HDD."
+      "I understand the concept of Git and the way to manage a project which its authors propose. I can make commits with Git bash and clone the remote repository to my HDD."
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ const SkillsList = [
     level: "Medium",
     img: "./github.png",
     description:
-      "From almost beginning of my programming path I use Github as my own cloud to store my code. For some time I am using gihub pages."
+      "From almost the beginning of my programming path I use Github as my own cloud to store code. For some time I am using github-pages."
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ const SkillsList = [
     level: "Beginner",
     img: "./mysql.png",
     description:
-      "I understand concept of relational DB. I can build simple queries. I know basic DB terminology and I have some experience in work with MySql and PHPmyAdmin."
+      "I understand the concept of relational DB. I can build simple queries. I know basic DB terminology and I have some experience in work with MySql and PHPmyAdmin."
   },
   {
     id: 10,
@@ -77,7 +77,7 @@ const SkillsList = [
     level: "Beginner",
     img: "./json.png",
     description:
-      "I understand syntax of that format. I see advantage in storing and using that type of data, especially in frontend."
+      "I understand the syntax of that format. I see an advantage in storing and using that type of data, especially in frontend."
   },
   {
     id: 11,
@@ -85,7 +85,7 @@ const SkillsList = [
     level: "Beginner",
     img: "./jquery.png",
     description:
-      "I know differences between jQuery and Vanilla JS. I know syntax and grammar of jQuery and I'm able to deal with legacy code written in jQuery."
+      "I know the differences between jQuery and Vanilla JS. I know syntax and grammar of jQuery and I'm able to deal with legacy code written in jQuery."
   },
   {
     id: 12,
@@ -93,7 +93,7 @@ const SkillsList = [
     level: "Medium",
     img: "./bootstrap.png",
     description:
-      "I know basic classes helpfull to styled standard divs and text elements or divide site into parts. I like bootstrap grid-model."
+      "I know basic classes helpful to styled standard divs and text elements or divide the site into parts. I like the bootstrap grid-model."
   },
   {
     id: 13,
@@ -101,7 +101,7 @@ const SkillsList = [
     level: "Beginner",
     img: "./linux.png",
     description:
-      "I can install and use Linux. I know basic unix commands. To make simple corrections in my files I use VIM editor in the terminal."
+      "I can install and use Linux. I know basic Unix commands. To make simple corrections in my files I use the VIM editor in the terminal."
   },
   {
     id: 14,
@@ -109,7 +109,7 @@ const SkillsList = [
     level: "Beginner",
     img: "./vscode.png",
     description:
-      "I usually work with this code editor. I can install all necessery extensions and plugins to work effectively. Prettier, eslint or simple syntax highlighting are invaluable help during programming."
+      "I usually work with this code editor. I can install all the necessary extensions and plugins to work effectively. Prettier, eslint or simple syntax highlighting are invaluable help during programming."
   },
   {
     id: 15,
@@ -117,7 +117,7 @@ const SkillsList = [
     level: "Medium",
     img: "./wp.png",
     description:
-      "I can build and customize websites with this popular CMS. I set up few pages for my friends from scratch and creating database to deployment. I can modify themes and php functions."
+      "I can build and customize websites with this popular CMS. I set up a few pages for my friends from scratch and creating a database for deployment. I can modify themes and PHP functions."
   },
   {
     id: 16,
@@ -125,7 +125,7 @@ const SkillsList = [
     level: "Beginner",
     img: "./c.png",
     description:
-      "I understand syntax of that language. I can also use such libraries as: stdlib, stdio, string, math to build simple console apps."
+      "I understand the syntax of that language. I can also use such libraries as stdlib, stdio, string, math to build simple console apps."
   }
 ];
 export default SkillsList;

@@ -7,9 +7,9 @@ const Line = styled.div`
   align-items: center;
   height: 15%;
   font-size: 16px;
-  color: blue;
-  text-shadow: 0px 0px 2px 2px blue;
-  border-bottom: solid 1px blue;
+  color: rgb(0, 89, 255);
+  text-shadow: 0px 0px 2px 2px rgb(0, 89, 255);
+  border-bottom: solid 1px rgb(0, 89, 255);
   width: 100%;
   margin: 5px;
   font-family: Roboto, sans-serif;

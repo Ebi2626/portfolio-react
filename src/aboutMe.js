@@ -19,7 +19,7 @@ class AboutMe extends Component {
       slide = "slideUp";
     }
     const Text =
-      "Hi, my name is Edwin and I create this page for you. I want to show you two facts: I can use React.js to build apps and I have some experience in programming. I have been learning front-end programming since 2019 and since October I am studying IT. Currently I am looking for another challenge at job market in position of junior front-end developer.";
+    "Hi, my name is Edwin and I created this page for you. I want to show you two facts: I can use React.js to build apps and I have some experience in programming. I have been learning front-end programming since 2019 and since October I am studying IT at WSZiB in Krakow. Currently, I am looking for a challenge at the job market in the position of a junior front-end developer.";
     if (this.props.vertical === 1) {
       return (
         <CSSTransition in={true} appear={true} classNames={slide} timeout={500}>

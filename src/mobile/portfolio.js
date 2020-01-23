@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./mobile.css";
+import Swipe from "react-easy-swipe";
 import ContentTitle from "./style/m_contentTitle";
 import PortfolioWrapper from "./style/m_portfolio";
 import ContentWrapper from "./style/m_contentWrapper";
@@ -20,6 +21,8 @@ export default function Portfolio() {
   let itemTitle, content;
   const [vertical, setVertical] = useState(1);
   const [horizontal, setHorizontal] = useState(1);
+  const [up, setUp] = useState(false);
+  const [down, setDown] = useState(true);
   useEffect(() => {
     // Just example of useEffect hook - here we make us
     // ensure that user will see cursor on little screens
@@ -36,15 +39,19 @@ export default function Portfolio() {
     switch (horizontal) {
       case 1:
         maxVertical = 2;
+        newVertical === 2 ? (setDown(false)) : (setDown(true));
         break;
       case 2:
         maxVertical = 5;
+        newVertical === 5 ? (setDown(false)) : (setDown(true));
         break;
       case 3:
         maxVertical = 16;
+        newVertical === 16 ? (setDown(false)) : (setDown(true));
         break;
       case 4:
         maxVertical = 4;
+        newVertical === 4 ? (setDown(false)) : (setDown(true));
         break;
       default:
         console.log(
@@ -58,16 +65,19 @@ export default function Portfolio() {
     } else {
       setVertical(maxVertical);
     }
+    return setUp(true);
   }
   // Function to move up
   function substractVertical() {
     highlight("up");
     let prevVertical = vertical;
+    (prevVertical-1) === 1 ? setUp(false) : setUp(true);
     if (prevVertical > 1) {
       setVertical(prevVertical - 1);
     } else {
       setVertical(1);
     }
+    return setDown(true);
   }
   // Going right
   function addHorizontal() {
@@ -126,13 +136,21 @@ export default function Portfolio() {
     }
   }
   return (
-    <PortfolioWrapper>
-      <ContentTitle>{itemTitle}</ContentTitle>
-      <ContentWrapper>{content}</ContentWrapper>
-      <Up id={"up"} onClick={substractVertical} />
-      <Down id={"down"} onClick={addVertical} />
-      <Left id={"left"} onClick={substractHorizontal} />
-      <Right id={"right"} onClick={addHorizontal} />
-    </PortfolioWrapper>
+    <Swipe
+      onSwipeUp={addVertical}
+      onSwipeDown={substractVertical}
+      onSwipeRight={substractHorizontal}
+      onSwipeLeft={addHorizontal}
+      tolerance={80}
+    >
+      <PortfolioWrapper>
+        <ContentTitle>{itemTitle}</ContentTitle>
+        <ContentWrapper>{content}</ContentWrapper>
+        {up && <Up id={"up"} onClick={substractVertical} />}
+        {down && <Down id={"down"} onClick={addVertical} />}
+        <Left id={"left"} onClick={substractHorizontal} />
+        <Right id={"right"} onClick={addHorizontal} />
+      </PortfolioWrapper>
+    </Swipe>
   );
 }

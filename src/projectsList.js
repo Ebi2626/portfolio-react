@@ -13,7 +13,7 @@ const projectsList = [
     technologyStack:
       "HTML, CSS, PHP, JavScript, Webpack, SCSS, MySql, JSON, Xampp, Git, Visual Stiudio Code",
     description:
-      "My first fullstack project from databse through backend to frontend. I create all backend logic, connections with DB and I customized webpack to combine my SCSS with php files.",
+      "My first full-stack project from the database through backend to frontend. I create all backend logic, connections with DB and I customized Webpack to combine my SCSS with PHP files.",
     img: "./stronnica.png",
     demo: "https://github.com/ebi2626/stronnica/",
     id: 2
@@ -22,7 +22,7 @@ const projectsList = [
     name: "Tetris in React",
     technologyStack: "HTML, CSS, JavaScript, React, Git, Visual Studio Code",
     description:
-      "Remake of a popular game - tetris. Written whole in React with react hooks and service workers. It helps me with better understanding of mapping to components.",
+      "The remake of a popular game - Tetris. Written whole in React with react hooks and service workers. It helped me with a better understanding of mapping to components.",
     img: "./tetris.png",
     demo: "https://ebi2626.github.io/tetris/",
     id: 3
@@ -31,7 +31,7 @@ const projectsList = [
     name: "Fruit memory game",
     technologyStack: "HTML, CSS, JavaScript, jQuery, Sublime Text",
     description:
-      "My first game written during discovering misterious of jQuery. It allows me to get better understanding of this library syntax.",
+      "My first game, it was written during discovering mysterious of jQuery. It allowed me to get a better understanding of this library syntax.",
     img: "./memory.png",
     demo: "https://ebi2626.github.io/FruitMemoryGame/",
     id: 4
@@ -41,7 +41,7 @@ const projectsList = [
     technologyStack:
       "HTML, CSS, JavaScript, jQuery, bootstrap, MySql (production), cPanel, Sublime Text",
     description:
-      "My first business website prepared for my friend. I was responsible for buying domain, hosting and configure everything. It lets me understand how whole web works and how to deploy websites.",
+      "My first business website prepared for my friend. I was responsible for buying a domain, hosting and configure everything. It let me understand how the whole web works and how to deploy websites.",
     img: "./otg.png",
     demo: "http://otglazurnik.pl/",
     id: 5

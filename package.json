@@ -2,7 +2,13 @@
   "name": "react",
   "version": "1.0.0",
   "description": "It is my portfolio in React. If you are looking for front-end dev, call me :)",
-  "keywords": ["frontend", "react", "javascript", "edwin harmata", "developer"],
+  "keywords": [
+    "frontend",
+    "react",
+    "javascript",
+    "edwin harmata",
+    "developer"
+  ],
   "homepage": "https://ebi2626.gihub.io/portfolio-react/",
   "main": "src/index.js",
   "dependencies": {
@@ -14,6 +20,7 @@
   },
   "devDependencies": {
     "gh-pages": "^2.2.0",
+    "react-easy-swipe": "0.0.18",
     "typescript": "3.3.3"
   },
   "scripts": {
