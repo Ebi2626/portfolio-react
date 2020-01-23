@@ -71,7 +71,7 @@ export default function Portfolio() {
   function substractVertical() {
     highlight("up");
     let prevVertical = vertical;
-    (prevVertical-1) === 1 ? setUp(false) : setUp(true);
+    prevVertical === (2 || 1) ? setUp(false) : setUp(true);
     if (prevVertical > 1) {
       setVertical(prevVertical - 1);
     } else {
@@ -81,6 +81,8 @@ export default function Portfolio() {
   }
   // Going right
   function addHorizontal() {
+    setUp(false);
+    setDown(true);
     highlight("right");
     let prevHorizontal = horizontal;
     setVertical(1);
@@ -92,6 +94,8 @@ export default function Portfolio() {
   }
   // Going left
   function substractHorizontal() {
+    setUp(false);
+    setDown(true);
     highlight("left");
     let prevHorizontal = horizontal;
     setVertical(1);
