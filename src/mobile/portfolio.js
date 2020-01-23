@@ -34,24 +34,24 @@ export default function Portfolio() {
   function addVertical() {
     highlight("down");
     let prevVertical = vertical;
-    let newVertical = vertical + 1;
+    let newVertical = prevVertical + 1;
     let maxVertical;
     switch (horizontal) {
       case 1:
         maxVertical = 2;
-        newVertical === 2 ? (setDown(false)) : (setDown(true));
+        newVertical > 1 ? setDown(false) : setDown(true);
         break;
       case 2:
         maxVertical = 5;
-        newVertical === 5 ? (setDown(false)) : (setDown(true));
+        newVertical > 4 ? setDown(false) : setDown(true);
         break;
       case 3:
         maxVertical = 16;
-        newVertical === 16 ? (setDown(false)) : (setDown(true));
+        newVertical > 15 ? setDown(false) : setDown(true);
         break;
       case 4:
         maxVertical = 4;
-        newVertical === 4 ? (setDown(false)) : (setDown(true));
+        newVertical > 3 ? setDown(false) : setDown(true);
         break;
       default:
         console.log(
@@ -71,9 +71,10 @@ export default function Portfolio() {
   function substractVertical() {
     highlight("up");
     let prevVertical = vertical;
-    prevVertical === (2 || 1) ? setUp(false) : setUp(true);
+    let newVertical = prevVertical - 1;
+    newVertical < 2 ? setUp(false) : setUp(true);
     if (prevVertical > 1) {
-      setVertical(prevVertical - 1);
+      setVertical(newVertical);
     } else {
       setVertical(1);
     }
