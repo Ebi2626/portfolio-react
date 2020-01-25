@@ -9,7 +9,7 @@
     "edwin harmata",
     "developer"
   ],
-  "homepage": "https://ebi2626.gihub.io/portfolio-react/",
+  "homepage": "https://ebi2626.github.io/portfolio-react/",
   "main": "src/index.js",
   "dependencies": {
     "react": "16.12.0",
