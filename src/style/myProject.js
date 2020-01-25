@@ -10,7 +10,6 @@ const MyProjectBox = styled.div`
   float: left;
   text-align: justify;
   font-size: 1.2rem;
-  top: 0;
 `;
 
 export default MyProjectBox;

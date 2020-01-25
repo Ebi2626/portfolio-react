@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 const AboutMeBox = styled.div`
   position: relative;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 92%;
   max-height: 768px;
