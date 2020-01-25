@@ -5,6 +5,7 @@ import Home from "./home";
 import MobilePortfolio from "./mobile/portfolio";
 import Entrance from "./style/entrance";
 import EntranceText from "./style/entranceText";
+import EntranceAnimation from "./style/entranceAnimation";
 
 import "./transition.css";
 import { CSSTransition } from "react-transition-group";
@@ -54,6 +55,7 @@ class Portfolio extends Component {
       vertical: 1, // It informa about vertical (depth) position of app
       prevVertical: 1, //It is usied to change kind of transition
       prevHorizontal: 1, // Like above
+      maxValue: 2,
       window: window.innerWidth, // Used to rerender app during resize
       height: window.innerHeight, // Like above
       down: true, // Enabling/disabling arrow down
@@ -101,7 +103,7 @@ class Portfolio extends Component {
     let link = document.querySelector("a");
     if (this.state.level > 2) {
       if (link) {
-        window.open(link.href, "_blank");
+        window.open(link.href, "_blank","fullscreen=no");
       }
     }
   }
@@ -112,29 +114,38 @@ class Portfolio extends Component {
       this.setState(prevState => {
         let newValue = prevState.vertical + 1;
         let currentValue = prevState.vertical;
+        let maxValue;
         let down;
         switch (this.state.horizontal) {
           case 1:
-            if (newValue > 2) {
-              newValue = 2;
+            maxValue = 2;
+            this.setState({maxValue: maxValue});
+            if (newValue > maxValue) {
+              newValue = maxValue;
             }
             newValue === 2 ? (down = false) : (down = true);
             break;
           case 2:
-            if (newValue > 5) {
-              newValue = 5;
+            maxValue = 5;
+            this.setState({maxValue: maxValue});
+            if (newValue > maxValue) {
+              newValue = maxValue;
             }
             newValue === 5 ? (down = false) : (down = true);
             break;
           case 3:
-            if (newValue > 16) {
-              newValue = 16;
+            maxValue = 16;
+            this.setState({maxValue: maxValue});
+            if (newValue > maxValue) {
+              newValue = maxValue;
             }
             newValue === 16 ? (down = false) : (down = true);
             break;
           case 4:
-            if (newValue > 4) {
-              newValue = 4;
+            maxValue = 4;
+            this.setState({maxValue: maxValue});
+            if (newValue > maxValue) {
+              newValue = maxValue;
             }
             newValue === 4 ? (down = false) : (down = true);
             break;
@@ -177,12 +188,31 @@ class Portfolio extends Component {
       this.setState(prevState => {
         let newValue = prevState.horizontal + 1;
         let currentValue = prevState.horizontal;
+        let maxValue;
         if (newValue > 4) {
           newValue = 1;
+        }
+        switch(newValue){
+          case 1:
+            maxValue = 2;
+          break;
+          case 2:
+            maxValue = 5;
+          break;
+          case 3:
+            maxValue = 16;
+          break;
+          case 4:
+            maxValue = 4;
+          break;
+          default:
+            console.log("Some error during horizontal movement");
+            break;
         }
         return {
           horizontal: newValue,
           prevHorizontal: currentValue,
+          maxValue: maxValue,
           vertical: 1,
           down: true,
           up: false
@@ -192,12 +222,31 @@ class Portfolio extends Component {
       this.setState(prevState => {
         let newValue = prevState.horizontal - 1;
         let currentValue = prevState.horizontal;
+        let maxValue;
         if (newValue < 1) {
           newValue = 4;
+        }
+        switch(newValue){
+          case 1:
+            maxValue = 2;
+          break;
+          case 2:
+            maxValue = 5;
+          break;
+          case 3:
+            maxValue = 16;
+          break;
+          case 4:
+            maxValue = 4;
+          break;
+          default:
+            console.log("Some error during horizontal movement");
+            break;
         }
         return {
           horizontal: newValue,
           prevHorizontal: currentValue,
+          maxValue: maxValue,
           vertical: 1,
           down: true,
           up: false
@@ -287,20 +336,11 @@ class Portfolio extends Component {
       body.style.cursor = "none";
       body.style.userSelect = "none";
       if (this.state.level !== 3) {
-        let entranceText1, entranceText2;
-        if (navigator.appName === "Netscape") {
-          entranceText1 =
-            'Welcome in my personal programming portfolio. Press "F11" and "enter" to continue';
-          entranceText2 =
-            'Use arrows to move through my portfolio. Use "enter" to open link. Press "enter" to enter into portfolio. Enjoy!';
-        } else {
-          entranceText1 =
-            'Welcome in my personal programming portfolio. Press "F11" to continue';
-          entranceText2 =
-            'Use arrows to move through my portfolio. Use "enter" to open link. Press "enter" to enter into portfolio. Enjoy!';
-        }
+        let entranceText1 = <p>Welcome to my portfolio.<br/> Toggle fullscreen to better experience (F11).<br/><span style={{color: "grey", fontSize: 12}}>Press enter to continue</span></p>;
+        let entranceText2 = <p>Move<br/><i className="fa fa-arrows-alt" style={{transform: "rotate(45deg)"}}></i><br/><span style={{color: "grey", fontSize: 12}}>Press enter to continue</span></p>;
         return (
           <Entrance>
+            <EntranceAnimation><img style={{width: "90vmin", height:"auto"}} alt="react-logo" src="./react-brands.svg"/></EntranceAnimation>
             <CSSTransition
               in={true}
               appear={true}
@@ -336,6 +376,7 @@ class Portfolio extends Component {
                 prevHorizontal={this.state.prevHorizontal}
                 up={this.state.up}
                 down={this.state.down}
+                maxValue={this.state.maxValue}
               />
             </CSSTransition>
           </PortfolioBox>

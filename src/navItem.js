@@ -5,6 +5,7 @@ import AboutMe from "./aboutMe";
 import MyProjects from "./myProjects";
 import MySkills from "./mySkills";
 import Contact from "./contact";
+import Counter from "./counter";
 import "./transition.css";
 import { CSSTransition } from "react-transition-group";
 
@@ -14,7 +15,12 @@ class NavItem extends Component {
     if (this.props.current) {
       switch (this.props.id) {
         case 1:
-          Content = <AboutMe vertical={this.props.vertical}  prevVertical={this.props.prevVertical}/>;
+          Content = (
+            <AboutMe
+              vertical={this.props.vertical}
+              prevVertical={this.props.prevVertical}
+            />
+          );
           break;
         case 2:
           Content = (
@@ -45,7 +51,14 @@ class NavItem extends Component {
       }
       return (
         <>
-          <Item style={this.props.style}>{this.props.element}</Item>
+          <Item style={this.props.style}>
+            {this.props.element}{" "}
+            <Counter
+              value={this.props.vertical}
+              maxValue={this.props.maxValue}
+              horizontal={this.props.horizontal}
+            />
+          </Item>
           <Wrapper>
             <CSSTransition
               appear={true}
@@ -59,7 +72,12 @@ class NavItem extends Component {
         </>
       );
     } else {
-      return <Item style={this.props.style}>{this.props.element}</Item>;
+      return (
+        <Item style={this.props.style}>
+          {this.props.element}{" "}
+          <Counter value={this.props.vertical} maxValue={this.props.maxValue} horizontal={this.props.horizontal}/>
+        </Item>
+      );
     }
   }
 }

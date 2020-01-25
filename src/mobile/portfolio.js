@@ -4,6 +4,7 @@ import Swipe from "react-easy-swipe";
 import ContentTitle from "./style/m_contentTitle";
 import PortfolioWrapper from "./style/m_portfolio";
 import ContentWrapper from "./style/m_contentWrapper";
+import CounterWrapper from "./../style/counter";
 import AboutMe from "./aboutMe";
 import MyProjects from "./myProjects";
 import MySkills from "./mySkills";
@@ -21,6 +22,7 @@ export default function Portfolio() {
   let itemTitle, content;
   const [vertical, setVertical] = useState(1);
   const [horizontal, setHorizontal] = useState(1);
+  const [maxValue, setMaxValue] = useState(2);
   const [up, setUp] = useState(false);
   const [down, setDown] = useState(true);
   useEffect(() => {
@@ -39,18 +41,22 @@ export default function Portfolio() {
     switch (horizontal) {
       case 1:
         maxVertical = 2;
+        setMaxValue(maxVertical);
         newVertical > 1 ? setDown(false) : setDown(true);
         break;
       case 2:
         maxVertical = 5;
+        setMaxValue(maxVertical);
         newVertical > 4 ? setDown(false) : setDown(true);
         break;
       case 3:
         maxVertical = 16;
+        setMaxValue(maxVertical);
         newVertical > 15 ? setDown(false) : setDown(true);
         break;
       case 4:
         maxVertical = 4;
+        setMaxValue(maxVertical);
         newVertical > 3 ? setDown(false) : setDown(true);
         break;
       default:
@@ -87,10 +93,30 @@ export default function Portfolio() {
     highlight("right");
     let prevHorizontal = horizontal;
     setVertical(1);
+    let newHorizontal
     if (prevHorizontal < 4) {
-      setHorizontal(prevHorizontal + 1);
+       newHorizontal = prevHorizontal + 1;
+      setHorizontal(newHorizontal);
     } else {
-      setHorizontal(1);
+      newHorizontal = 1;
+      setHorizontal(newHorizontal);
+    }
+    switch(newHorizontal){
+      case 1:
+        setMaxValue(2);
+      break;
+      case 2:
+        setMaxValue(5);
+      break;
+      case 3:
+        setMaxValue(16);
+      break;
+      case 4:
+        setMaxValue(4);
+      break;
+      default:
+        console.log("Some error in horizontal movement");
+        break;
     }
   }
   // Going left
@@ -99,11 +125,31 @@ export default function Portfolio() {
     setDown(true);
     highlight("left");
     let prevHorizontal = horizontal;
+    let newHorizontal;
     setVertical(1);
     if (prevHorizontal > 1) {
-      setHorizontal(prevHorizontal - 1);
+      newHorizontal = prevHorizontal - 1;
+      setHorizontal(newHorizontal);
     } else {
-      setHorizontal(4);
+      newHorizontal = 4;
+      setHorizontal(newHorizontal);
+    }
+    switch(newHorizontal){
+      case 1:
+        setMaxValue(2);
+      break;
+      case 2:
+        setMaxValue(5);
+      break;
+      case 3:
+        setMaxValue(16);
+      break;
+      case 4:
+        setMaxValue(4);
+      break;
+      default:
+        console.log("Some error in horizontal movement");
+        break;
     }
   }
   // Changing application content depends on state
@@ -149,7 +195,12 @@ export default function Portfolio() {
       tolerance={80}
     >
       <PortfolioWrapper>
-        <ContentTitle>{itemTitle}</ContentTitle>
+        <ContentTitle>
+          {itemTitle}
+          <CounterWrapper>
+            {vertical}/{maxValue}
+          </CounterWrapper>
+        </ContentTitle>
         <ContentWrapper>{content}</ContentWrapper>
         {up && <Up id={"up"} onClick={substractVertical} />}
         {down && <Down id={"down"} onClick={addVertical} />}

@@ -5,7 +5,7 @@ const SkillsList = [
     level: "Medium",
     img: "./html5.png",
     description:
-      "I know all the basic tags needed to write a whole website structure. I understand and I am able to use modern semantic tags to build accessible websites."
+      "I know all the basic tags needed to write a whole website structure. I am using modern semantic tags to build accessible websites."
   },
   {
     id: 2,

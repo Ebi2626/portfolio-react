@@ -90,6 +90,8 @@ class Nav extends Component {
             element="About me"
             vertical={this.props.vertical}
             prevVertical={this.props.prevVertical}
+            maxValue={this.props.maxValue}
+            horizontal={this.props.horizontal}
           />
         </CSSTransition>
         <CSSTransition appear={true} in={true} classNames="fade" timeout={3000}>
@@ -101,6 +103,8 @@ class Nav extends Component {
             element="My projects"
             vertical={this.props.vertical}
             prevVertical={this.props.prevVertical}
+            maxValue={this.props.maxValue}
+            horizontal={this.props.horizontal}
           />
         </CSSTransition>
         <CSSTransition appear={true} in={true} classNames="fade" timeout={3000}>
@@ -112,6 +116,8 @@ class Nav extends Component {
             element="My skills"
             vertical={this.props.vertical}
             prevVertical={this.props.prevVertical}
+            maxValue={this.props.maxValue}
+            horizontal={this.props.horizontal}
           />
         </CSSTransition>
         <CSSTransition appear={true} in={true} classNames="fade" timeout={3000}>
@@ -123,6 +129,8 @@ class Nav extends Component {
             element="Contact"
             vertical={this.props.vertical}
             prevVertical={this.props.prevVertical}
+            maxValue={this.props.maxValue}
+            horizontal={this.props.horizontal}
           />
         </CSSTransition>
       </NavBox>

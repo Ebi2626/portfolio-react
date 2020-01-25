@@ -17,6 +17,7 @@ class Home extends Component {
           vertical={this.props.vertical}
           prevVertical={this.props.prevVertical}
           prevHorizontal={this.props.prevHorizontal}
+          maxValue={this.props.maxValue}
         />
         {this.props.up && (
           <CSSTransition
