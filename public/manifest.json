@@ -98,7 +98,7 @@
             "sizes": "16x16"
         }
     ],
-    "start_url": "https://www.ebi2626.github.com/portfolio-react/",
+    "start_url": "/",
     "splash_pages": "null",
     "scope": "/",
     "theme_color": "#000000",
