@@ -56,7 +56,7 @@ class Portfolio extends Component {
       vertical: 1, // It informa about vertical (depth) position of app
       prevVertical: 1, //It is usied to change kind of transition
       prevHorizontal: 1, // Like above
-      maxValue: 2,
+      maxValue: 2, // It is a max vertical depth of component denendent on horizontal position
       window: window.innerWidth, // Used to rerender app during resize
       height: window.innerHeight, // Like above
       down: true, // Enabling/disabling arrow down
@@ -337,7 +337,7 @@ class Portfolio extends Component {
       body.style.cursor = "none";
       body.style.userSelect = "none";
       if (this.state.level !== 3) {
-        let entranceText1 = <p>Welcome to my portfolio.<br/> Toggle fullscreen to better experience (F11).<br/><span style={{color: "grey", fontSize: 12}}>Press enter to continue</span></p>;
+        let entranceText1 = <p>Welcome to my portfolio.<br/> Toggle fullscreen for better experience (F11).<br/><span style={{color: "grey", fontSize: 12}}>Press enter to continue</span></p>;
         let entranceText2 = <p>Move<br/><i className="fa fa-arrows-alt" style={{transform: "rotate(45deg)"}}></i><br/><span style={{color: "grey", fontSize: 12}}>Press enter to continue</span></p>;
         return (
           <Entrance>
