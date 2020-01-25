@@ -98,7 +98,7 @@
             "sizes": "16x16"
         }
     ],
-    "start_url": "/",
+    "start_url": "/portfolio-react/",
     "splash_pages": "null",
     "scope": "/",
     "theme_color": "#000000",
