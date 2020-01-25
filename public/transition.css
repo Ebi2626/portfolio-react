@@ -1,0 +1,154 @@
+.fade-appear {
+  opacity: 0;
+}
+.fade-appear-active {
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+.fade-appear-done {
+  opacity: 1;
+}
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+.fade-enter-done {
+  opacity: 1;
+}
+.fade-exit {
+  opacity: 0;
+}
+.fade-exit-active {
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+.fade-exit-done {
+  opacity: 0;
+}
+
+.fade-btn-appear {
+  opacity: 0;
+}
+.fade-btn-appear-active {
+  opacity: 0.3;
+  transition: opacity 1s linear;
+}
+.fade-btn-appear-done {
+  opacity: 0.3;
+}
+.fade-btn-enter {
+  opacity: 0;
+}
+.fade-btn-enter-active {
+  opacity: 0.3;
+  transition: opacity 1s linear;
+}
+.fade-btn-enter-done {
+  opacity: 0.3;
+}
+.fade-btn-exit {
+  opacity: 0;
+}
+.fade-btn-exit-active {
+  opacity: 0.3;
+  transition: opacity 0.5s linear;
+}
+.fade-btn-exit-done {
+  opacity: 0;
+}
+
+.slideUp-appear {
+  top: 100vh;
+}
+.slideUp-appear-active {
+  top: 0vh;
+  transition: top 0.5s linear;
+}
+.slideUp-appear-done {
+  top: 0vh;
+}
+.slideUp-enter {
+  top: 100vh;
+}
+.slideUp-enter-active {
+  top: 0vh;
+  transition: top 0.5s linear;
+}
+.slideUp-enter-done {
+  top: 0vh;
+}
+.slideUp-exit {
+  top: -100vh;
+}
+.slideUp-exit-active {
+  top: 0vh;
+  transition: top 0.5s linear;
+}
+.slideUp-exit-done {
+  top: -100;
+}
+
+.slideDown-appear {
+  top: -100vh;
+}
+.slideDown-appear-active {
+  top: 0vh;
+  transition: top 0.5s linear;
+}
+.slideDown-appear-done {
+  top: 0vh;
+}
+.slideDown-enter {
+  top: -100vh;
+}
+.slideDown-enter-active {
+  top: 0vh;
+  transition: top 0.5s linear;
+}
+.slideDown-enter-done {
+  top: 0vh;
+}
+.slideDown-exit {
+  top: 100vh;
+}
+.slideDown-exit-active {
+  top: 0vh;
+  transition: top 0.5s linear;
+}
+.slideDown-exit-done {
+  top: 100vh;
+}
+
+.slideLeft-appear {
+  left: -100vw;
+}
+.slideLeft-appear-active {
+  left: 0vw;
+  transition: left 0.5s linear;
+}
+.slideLeft-appear-done {
+  left: 0vw;
+}
+.slideLeft-enter {
+  left: -100vw;
+}
+.slideLeft-enter-active {
+  left: 0vw;
+  transition: left 0.5s linear;
+}
+.slideLeft-enter-done {
+  left: 0vw;
+}
+.slideLeft-exit {
+  left: -100vw;
+}
+.slideLeft-exit-active {
+  left: 0vw;
+  transition: left 0.5s linear;
+}
+.slideLeft-exit-done {
+  left: -100vw;
+}
