@@ -6,6 +6,7 @@ import MobilePortfolio from "./mobile/portfolio";
 import Entrance from "./style/entrance";
 import EntranceText from "./style/entranceText";
 import EntranceAnimation from "./style/entranceAnimation";
+import * as serviceWorker from './serviceWorker';
 
 import "./transition.css";
 import { CSSTransition } from "react-transition-group";
@@ -401,3 +402,4 @@ class Portfolio extends Component {
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<Portfolio />, rootElement);
+serviceWorker.register();
