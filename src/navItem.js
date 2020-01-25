@@ -75,7 +75,11 @@ class NavItem extends Component {
       return (
         <Item style={this.props.style}>
           {this.props.element}{" "}
-          <Counter value={this.props.vertical} maxValue={this.props.maxValue} horizontal={this.props.horizontal}/>
+          <Counter
+            value={this.props.vertical}
+            maxValue={this.props.maxValue}
+            horizontal={this.props.horizontal}
+          />
         </Item>
       );
     }
