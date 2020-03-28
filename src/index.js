@@ -127,12 +127,12 @@ class Portfolio extends Component {
             newValue === 2 ? (down = false) : (down = true);
             break;
           case 2:
-            maxValue = 5;
+            maxValue = 6;
             this.setState({maxValue: maxValue});
             if (newValue > maxValue) {
               newValue = maxValue;
             }
-            newValue === 5 ? (down = false) : (down = true);
+            newValue === 6 ? (down = false) : (down = true);
             break;
           case 3:
             maxValue = 16;
@@ -198,7 +198,7 @@ class Portfolio extends Component {
             maxValue = 2;
           break;
           case 2:
-            maxValue = 5;
+            maxValue = 6;
           break;
           case 3:
             maxValue = 16;
